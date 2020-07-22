@@ -19,3 +19,22 @@ def fourth(request):
 
 def fifth(request):
     return render(request,"directory/fifth.html",context={'a':10,'b':20})
+
+def urls_data(request,name):
+    return HttpResponse("<h1>{}</h1>".format(name))
+
+def ab(request,ab):
+    a=ab.split(" ")
+    sum=int(a[0])+int(a[1])
+    return HttpResponse(str(sum))
+
+def pq(request,p,q):
+    sum=int(p)+int(q)
+    return HttpResponse(str(sum))
+
+def great(request,a,b):
+    if int(a) > int(b) :
+        greatest=str(a)+" is greater"
+    else:
+        greatest=str(b)+" is greater"
+    return HttpResponse(str(greatest))

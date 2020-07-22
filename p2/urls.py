@@ -27,4 +27,8 @@ urlpatterns = [
     path('third/', views.third,name="third"),
     path("fourth/", views.fourth,name="fourth"),
     path("fifth/", views.fifth,name="fifth"),
+    path("urls_data/<name>", views.urls_data,name="urlsdata"),
+    path("ab/<ab>",views.ab,name="ab"),
+    path("pq/<p>/<q>",views.pq,name="pq"),
+    path("great/<a>/<b>", views.great,name="great"),
 ]
